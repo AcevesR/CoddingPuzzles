@@ -1,5 +1,9 @@
 Considering three numbers A, B, and C (all of them integers), determine their sum.
 
+Explanation:
+
+In the third sample, A + B + C = 16 + 6 + 97 = 119.
+
 Sample 1:
   A = 3
   B = 2
