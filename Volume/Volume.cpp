@@ -14,9 +14,9 @@ main()
       do
 	  {
 		printf("Hola\n");
-      printf("¿Quieres calcular el volumen de 1)Cilindro 2)Cono");
+      printf("Do you want to calculate the volume of...? 1)Cylinder 2)Cone");
       scanf("%i",&dec);
-      printf("Escribe el valor del radio");
+      printf("Write the value of the radius");
       scanf("%f",&r);
       ar=area(r);
     
@@ -32,7 +32,7 @@ main()
     	Vco=(Vci)/3;
         imprime(Vco);
 		}                         
-      printf("Quires calcular otro volumen 1)Si 2)No");
+      printf("Do you want to calculate another volume? 1)Yes 2)No");
       scanf("%i",&elec);
       }
 	  while (elec==1);
@@ -45,7 +45,7 @@ main()
 float pide()
 {
       float h;     
-      printf("Escribe el valor de la altura");
+      printf("Write the value of the height");
       scanf("%f",&h);
       return h;
 }
@@ -59,5 +59,5 @@ float area(float r)
 
 void imprime (float Vol)
 {
-     printf("El volumen de la figura es %f ", Vol);
+     printf("The volume of the figure is %f ", Vol);
  }
