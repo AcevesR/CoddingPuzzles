@@ -8,8 +8,7 @@ float ask();
 float area(float r);
 void print(float);
 
-main()
-{
+main() {
       int dec, choice;
       float Vci, Vco, r,h, ar;
 
@@ -17,23 +16,28 @@ main()
 	printf("Hello.\n");
       printf("Do you want to calculate the volume of...? \n1) Cylinder \n2) Cone\n");
       scanf("%i", &dec);
+      system("cls");
+      
       printf("Write the value of the radius\n");
       scanf("%f", &r);
+      system("cls");
+
       ar = area(r);
     
       if(dec == 1) {
-        h = ask();
-        Vci = ar * h;
-        print(Vci);
-      }
-      else {
       h = ask();
+      Vci = ar * h;
+      print(Vci);
+      }
+
+      else {
     	Vco = (Vci) / 3;
       print(Vco);
 	}   
 
-      printf("Do you want to calculate another volume? \n1)Yes \n2)No\n");
+      printf("\nDo you want to calculate another volume? \n1)Yes \n2)No\n");
       scanf("%i", &choice);
+      system("cls");
 
       }
 	while (choice == 1);
@@ -44,22 +48,20 @@ main()
       system("PAUSE"); 
 }
 
-float ask()
-{
+float ask() {
       float h;     
       printf("Write the value of the height\n");
       scanf("%f", &h);
+      system("cls");
       return h;
 }
 
-float area(float r)
-{
+float area(float r) {
      float area2;
      area2 = PI * r * r;
      return area2;
 }
 
-void print (float Vol)
-{
-     printf("The volume of the figure is %f ", Vol);
- }
+void print (float Vol) {
+     printf("The volume of the figure is %f ", Vol, "\n");
+}
