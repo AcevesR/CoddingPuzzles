@@ -4,8 +4,7 @@
 
 #define PI 3.141592
 
-float ask();
-float area(float r);
+float ask_h(), ask_r(), area(float r);
 void print(float);
 
 main() {
@@ -17,23 +16,29 @@ main() {
       printf("Do you want to calculate the volume of...? \n1) Cylinder \n2) Cone\n");
       scanf("%i", &dec);
       system("cls");
-      
-      printf("Write the value of the radius\n");
-      scanf("%f", &r);
-      system("cls");
-
-      ar = area(r);
     
       if(dec == 1) {
-      h = ask();
+      r = ask_r();
+      h = ask_h();
+      ar = area(r);
       Vci = ar * h;
       print(Vci);
       }
 
-      else {
-    	Vco = (Vci) / 3;
+      else if(dec == 2){
+      r = ask_r();
+      h = ask_h();
+      ar = area(r);
+    	Vco = (ar * h) / 3;
       print(Vco);
-	}   
+	}
+
+      else {
+      printf("\nWrong input.\n");
+      system("PAUSE");
+      system("cls");
+      exit(0);
+	}      
 
       printf("\nDo you want to calculate another volume? \n1)Yes \n2)No\n");
       scanf("%i", &choice);
@@ -44,11 +49,17 @@ main() {
       
 	system("PAUSE");
       system("cls");
-      printf("A La Gloria Del Gran Arquitecto Del Universo\n");
-      system("PAUSE"); 
 }
 
-float ask() {
+float ask_r() {
+      float r;     
+      printf("Write the value of the radius\n");
+      scanf("%f", &r);
+      system("cls");
+      return r;
+}
+
+float ask_h() {
       float h;     
       printf("Write the value of the height\n");
       scanf("%f", &h);
@@ -57,9 +68,9 @@ float ask() {
 }
 
 float area(float r) {
-     float area2;
-     area2 = PI * r * r;
-     return area2;
+     float area_calc;
+     area_calc = PI * r * r;
+     return area_calc;
 }
 
 void print (float Vol) {
